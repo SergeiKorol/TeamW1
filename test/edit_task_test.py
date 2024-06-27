@@ -7,7 +7,7 @@ def test_edit():
     
     body = {"title":"generated-1"}
     response = requests.patch(f'https://todo-app-sky.herokuapp.com/{id}', json=body)
-    assert response.status_code == 200
+    assert response.status_code == 201
     
     response = requests.get(f'https://todo-app-sky.herokuapp.com/{id}')
     assert response.status_code == 200
